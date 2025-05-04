@@ -1,39 +1,123 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif; /* Use a modern font */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f9f9f9; /* Softer background */
+    color: #444; /* Slightly lighter text color */
+    line-height: 1.6; /* Improve readability */
 }
 
+/* Header */
 header {
-    background: #333;
+    background: linear-gradient(90deg, #4CAF50, #2E7D32); /* Add gradient */
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
+    display: flex; /* Use flexbox for better layout */
+    justify-content: center;
+    gap: 20px; /* Add spacing between items */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Add hover effect */
+}
+
+/* Headings */
 h1 {
     text-align: center;
-    color: #333;
+    color: #2E7D32; /* Match the header gradient */
+    font-size: 2.5rem; /* Larger font size */
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
 }
 
+/* Paragraphs */
 p {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.1rem; /* Slightly larger font */
+    color: #555; /* Softer text color */
+    margin: 10px 20px;
+}
+
+/* WebGL Section (Optional) */
+#webgl-projects {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.webgl-container {
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer (Optional) */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Smaller font for links */
+        padding: 8px 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
